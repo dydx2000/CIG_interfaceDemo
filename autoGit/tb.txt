@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:/Users/admin/PycharmProjects/kaitao/autoGit/tracebakTest.py", line 9, in <module>
+    1 / 0
+ZeroDivisionError: division by zero
