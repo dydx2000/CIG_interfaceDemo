@@ -27,26 +27,27 @@ while True:
 
                     if i%2 != 0 and i>=3:  #大于3的单数行号进行处理
 
-                        print("第 %s 行"%i,end=" ")
-
-                        print(str1,end="")
-
 
                         list2 = str1.split (" ")  #字手段串分离并生成列表
 
-                        while '' in list2:    #去除列除中的空字符
+                        while '' in list2:    #去除列表中的空字符串
                             list2.remove ('')
 
                         if len(list2)>3:
 
                             try:
+                                print("第 %s 行" % i, end=" ")
+
+                                print(str1, end="")
                                 # print(list2[-4])  #打印出这一行的 lostframe 值
                                 V.append(list2[-4]) #lostframe值加入列表
                             except:
                                 pass
                         else:
+                            print("此处数据异常!")
                             flag = False
                             print()
+                            # break
                 # try:
                 #     sheet0.append(V)
                 # except:

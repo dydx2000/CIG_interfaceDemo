@@ -4,6 +4,7 @@ listStr = str1.split(" ")
 print(listStr)
 while "" in listStr:
     listStr.remove("")
+
 print(listStr)
 print(listStr[2:5])
 print(listStr[-1])
