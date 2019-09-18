@@ -35,7 +35,7 @@ token = cookie
                     'Authorization': 'loginToken=' + cookie}'''
 
 
-def get_blackLisk():
+def get_blackList():
     print("获取黑名单")
     # 请求头
     header_blacklist = {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': cookie}
@@ -51,7 +51,24 @@ def get_blackLisk():
     # for header_key, header_value in r.json().items():
     #     print(header_key, ":", header_value)
 
+def get_whiteList():
+    print("获取白名单")
+    # 请求头
+    header_blacklist = {'Content-Type': 'application/json;charset=UTF-8', 'Authorization': cookie}
+
+    # 请求路径
+    url = 'http://117.78.21.190/api/visitor/whitelist/queryPageList/?pageNum=1&pageSize=10'
+
+    # 请求
+    r = requests.get(url=url, headers=header_blacklist)
+    # print(u'HTTP状态码:', r.status_code)
+    # print(u'请求的URL:', r.url)
+    print(r.json())
+    # for header_key, header_value in r.json().items():
+    #     print(header_key, ":", header_value)
+
 
 if __name__ == '__main__':
     login()
-    get_blackLisk()
+    get_blackList()
+    get_whiteList()
